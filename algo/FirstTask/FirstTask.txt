@@ -1,0 +1,7 @@
+Première tâche :
+Il vous est demandé d'écrire un algorithme qui remplit les conditions suivantes : 
+
+Nom : Produit scalaire
+Description:
+Ecrire une fonction, appelée dot_product qui calcule dans la variable ps, le produit scalaire de v1 et v2 (v1 et v2 sont des vecteurs de IR)
+Écrire un algorithme qui détermine, pour n couples de vecteurs donnés, si deux vecteurs de IR donné sont orthogonaux, en appelant la procédure définie à la question précédente. Le produit scalaire de deux vecteurs orthogonaux est nul.

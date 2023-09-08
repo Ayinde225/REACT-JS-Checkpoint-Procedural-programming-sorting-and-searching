@@ -1,0 +1,32 @@
+ALGORITHM tri_par_insertion
+    n, x, i, j : INTEGER
+    array : ARRAY_OF INTEGER[5]
+
+BEGIN
+    FOR i FROM 1 TO 4 DO
+        READ(array[i])
+    END_FOR
+
+    FOR i FROM 1 TO 4 DO
+        x := array[i]
+        j := i
+
+        WHILE (j > 0 AND array[j - 1] > x) DO
+            array[j] := array[j - 1]
+            j := j - 1
+        END_WHILE
+
+        array[j] := x
+    END_FOR
+END
+
+ALGORITHM tri
+    array : ARRAY_OF INTEGER[5]
+
+BEGIN
+    tri_par_insertion(array)
+
+    FOR i FROM 1 TO 5 DO
+        WRITE(array[i])
+    END_FOR
+END

@@ -1,0 +1,29 @@
+PROCEDURE dot_product(v1, v2)
+VAR
+    ps: INTEGER
+BEGIN
+    ps := 0
+    FOR i FROM 0 TO v1.length-1 STEP 1 DO
+        ps := ps + (v1[i] * v2[i])
+    END_FOR
+
+    RETURN ps 
+END
+
+ALGORITHM produit_scalaire
+VAR
+    v1: ARRAY_OF INTEGER[2];  
+    v2: ARRAY_OF INTEGER[2];
+    scal: INTEGER
+BEGIN
+    READ(v1)
+    READ(v2)
+
+    scal := dot_product(v1, v2) 
+
+    IF (scal <> 0) THEN
+        WRITE("Les deux vecteurs ne sont pas orthogonaux")
+    ELSE
+        WRITE("Les vecteurs sont orthogonaux")
+    END_IF
+END
